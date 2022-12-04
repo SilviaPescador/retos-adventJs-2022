@@ -27,14 +27,14 @@ Cosas a tener en cuenta:
 */
 
 
-const packOfGifts = ["book", "doll", "ball", "cosa", "correiverás"]
-const reindeers = ["dasher", "dancer", "lagartijillamorena"]
+const packOfGifts = ["book", "doll", "ball"]
+const reindeers = ["dasher", "dancer"]
 
-/*
-Puntos conseguidos: 198
-3024 ops/s 
-Complejidad ciclomática: 1
-Mantenibilidad: 171%
-*/
 
-distributeGifts = (packOfGifts, reindeers) => Math.floor(reindeers.reduce((acc, reindeer) => acc + (reindeer.length * 2) , 0)/ packOfGifts.reduce((acc, gift) => acc + (gift.length), 0))
+// Puntos conseguidos: 198 3024 ops/s  Complejidad ciclomática: 1 Mantenibilidad: 171%
+
+distributeGifts = (packOfGifts, reindeers) => Math.floor(reindeers.reduce((acc, reindeer) => acc + (reindeer.length * 2), 0) 
+                                                        / packOfGifts.reduce((acc, gift) => acc + (gift.length), 0))
+
+
+console.log(distributeGifts(packOfGifts, reindeers))
